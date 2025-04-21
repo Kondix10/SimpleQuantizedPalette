@@ -11,7 +11,7 @@ def get_palette(cv2_image, colors_number: int):  #cv2_image in BGR format!
     pil_image = Image.fromarray(cv2_image)
     pil_image = pil_image.quantize(colors_number, None, 0, None, 0)
     
-    #uzyskanie wartości RGB pikseli
+    #getting RGB values of each pixel
     color_palette = list(set((pil_image.convert("RGB")).getdata()))  #set - removing duplicates, getting the quantized color palette
 
     if len(color_palette)<colors_number:          #Filling in remaining colors if image doesn't have enough colors for "colors_number"
@@ -23,7 +23,6 @@ def get_palette(cv2_image, colors_number: int):  #cv2_image in BGR format!
 
 #constants
 i=0
-full=2
 width=80
 height=60
 
