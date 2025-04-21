@@ -2,6 +2,7 @@ from PIL import Image
 import time
 import cv2
 import math
+import os.path
 
 
 #function to get a quantized color palette using PIL quantize function
@@ -20,8 +21,6 @@ def get_palette(cv2_image, colors_number: int):  #cv2_image in BGR format!
     return color_palette
 
 
-
-
 #constants
 i=0
 full=2
@@ -29,7 +28,13 @@ width=80
 height=60
 
 #inputs
-name_in = input('Input file name[+extension]: ')
+file_exists = False
+while(not file_exists):
+    name_in = input('Input file name[+extension]: ')
+    file_exists = os.path.isfile(name_in)
+    if(not file_exists):
+        print("File does not exist!")
+
 name_out = input('Output file name: ')
 
 #opening video with opencv, printing information
