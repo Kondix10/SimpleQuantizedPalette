@@ -22,7 +22,7 @@ or
 ### Running the script
 The script will ask you for:
 - the name of the input file with the extension (e.g. *video.mp4* )
-- the name of the output file. The fiel will be saved as: *palette_providedOutputName.rgbp*
+- the name of the output file. The file will be saved as: *palette_providedOutputName.rgbp*
 
 Then information about the video will be printed to the terminal and the script will guide the user through the rest of the process.
 
